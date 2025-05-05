@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DataWiz - Excel Data Services | Meike Quick Cyber</title>
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #4cc9f0;
+      --primary-dark: #3a86ff;
+      --secondary: #4895ef;
+      --light: #f8f9fa;
+      --dark: #212529;
+      --gradient: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.12);
+      --shadow-lg: 0 8px 24px rgba(0,0,0,0.16);
+      --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #f8fafc;
+    }
+
+    .datawiz-hero {
+      background: var(--gradient);
+      color: white;
+      padding-top: 100px;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .datawiz-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: 
+        radial-gradient(circle at 20% 30%, rgba(255,255,255,0.15) 0%, transparent 20%),
+        radial-gradient(circle at 80% 70%, rgba(255,255,255,0.15) 0%, transparent 20%);
+    }
+
+    .floating {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    .service-card {
+      border: none;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      background: white;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .icon-circle {
+      width: 80px;
+      height: 80px;
+      background: rgba(76, 201, 240, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      font-size: 2rem;
+      color: var(--primary);
+      transition: var(--transition);
+    }
+
+    .service-card:hover .icon-circle {
+      background: var(--gradient);
+      color: white;
+      transform: rotateY(180deg);
+    }
+
+    .data-visualization {
+      background: rgba(76, 201, 240, 0.05);
+      border-radius: 16px;
+      padding: 2rem;
+      border: 1px dashed var(--primary);
+    }
+
+    .process-step {
+      position: relative;
+      padding-left: 80px;
+      margin-bottom: 2rem;
+    }
+
+    .step-number {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 60px;
+      height: 60px;
+      background: var(--gradient);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .btn-primary {
+      background: var(--gradient);
+      border: none;
+      padding: 0.75rem 1.75rem;
+      font-weight: 600;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .nav-pills .nav-link.active {
+      background: var(--gradient);
+    }
+
+    .nav-pills .nav-link {
+      color: var(--dark);
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">
+        <img src="assets/logo.png" alt="Meike Quick Cyber Logo" height="50">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="../services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#ourdatawizservices">DataWiz</a></li>
+          <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+        </ul>
+        <div class="ms-lg-3 mt-3 mt-lg-0">
+          <a href="https://wa.me/254700800275" class="btn btn-primary">
+            <i class="fab fa-whatsapp me-2"></i> Get Help
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="datawiz-hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6" data-aos="fade-right">
+          <h1 class="display-4 fw-bold mb-4">DataWiz Excel Services</h1>
+          <p class="lead mb-4">Transform your raw data into powerful insights with our expert Excel data entry, advanced calculations, and stunning visualizations.</p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="#services" class="btn btn-light btn-lg px-4">
+              <i class="fas fa-chart-bar me-2"></i> Our Services
+            </a>
+            <a href="https://wa.me/254700800275" class="btn btn-outline-light btn-lg px-4">
+              <i class="fab fa-whatsapp me-2"></i> Get Started
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-left">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+               alt="Data Visualization" class="img-fluid floating">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-5">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <h2 class="display-5 fw-bold mb-3" id="datawizservices">Our DataWiz Services</h2>
+        <p class="lead">Professional Excel solutions tailored to your business needs</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-card h-100 p-4 text-center">
+            <div class="icon-circle mb-4">
+              <i class="fas fa-keyboard"></i>
+            </div>
+            <h3>Data Entry</h3>
+            <p>Accurate and efficient data entry services for all your Excel needs</p>
+            <ul class="text-start mt-3">
+              <li>Manual data entry</li>
+              <li>Data cleaning</li>
+              <li>Formatting</li>
+              <li>Data validation</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-card h-100 p-4 text-center">
+            <div class="icon-circle mb-4">
+              <i class="fas fa-calculator"></i>
+            </div>
+            <h3>Advanced Calculations</h3>
+            <p>Complex formulas and functions to analyze your data</p>
+            <ul class="text-start mt-3">
+              <li>Financial modeling</li>
+              <li>Statistical analysis</li>
+              <li>Automated reports</li>
+              <li>Macros & VBA</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-card h-100 p-4 text-center">
+            <div class="icon-circle mb-4">
+              <i class="fas fa-chart-pie"></i>
+            </div>
+            <h3>Data Visualization</h3>
+            <p>Beautiful charts and dashboards to showcase your data</p>
+            <ul class="text-start mt-3">
+              <li>Interactive dashboards</li>
+              <li>Pivot tables</li>
+              <li>Conditional formatting</li>
+              <li>Professional reports</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How We Work Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6" data-aos="fade-right">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1415&q=80" 
+               alt="Excel Dashboard" class="img-fluid rounded-3 shadow">
+        </div>
+        <div class="col-lg-6" data-aos="fade-left">
+          <h2 class="fw-bold mb-4">How Meike Quick Cyber Excels at Data</h2>
+          
+          <div class="process-step">
+            <div class="step-number">1</div>
+            <div>
+              <h4>Data Collection</h4>
+              <p>We receive your raw data through secure channels (email, cloud storage, or direct upload).</p>
+            </div>
+          </div>
+          
+          <div class="process-step">
+            <div class="step-number">2</div>
+            <div>
+              <h4>Data Processing</h4>
+              <p>Our experts clean, organize, and structure your data for optimal analysis.</p>
+            </div>
+          </div>
+          
+          <div class="process-step">
+            <div class="step-number">3</div>
+            <div>
+              <h4>Analysis & Visualization</h4>
+              <p>We apply advanced Excel techniques to extract insights and create visual reports.</p>
+            </div>
+          </div>
+          
+          <div class="process-step">
+            <div class="step-number">4</div>
+            <div>
+              <h4>Delivery & Support</h4>
+              <p>You receive your enhanced Excel files with clear documentation and ongoing support.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Data Visualization Showcase -->
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <h2 class="display-5 fw-bold mb-3">Data Visualization Examples</h2>
+        <p class="lead">Turning numbers into actionable insights</p>
+      </div>
+      
+      <ul class="nav nav-pills mb-4 justify-content-center" id="dataVizTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="charts-tab" data-bs-toggle="pill" data-bs-target="#charts" type="button">Charts</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="dashboards-tab" data-bs-toggle="pill" data-bs-target="#dashboards" type="button">Dashboards</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="reports-tab" data-bs-toggle="pill" data-bs-target="#reports" type="button">Reports</button>
+        </li>
+      </ul>
+      
+      <div class="tab-content" id="dataVizTabContent">
+        <div class="tab-pane fade show active" id="charts" role="tabpanel">
+          <div class="data-visualization">
+            <div class="row align-items-center">
+              <div class="col-md-6">
+                <h3>Interactive Charts</h3>
+                <p>We create dynamic charts that update automatically as your data changes:</p>
+                <ul>
+                  <li>Trend analysis with line charts</li>
+                  <li>Comparison with bar/column charts</li>
+                  <li>Composition with pie/doughnut charts</li>
+                  <li>Relationship with scatter plots</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1415&q=80" 
+                     alt="Excel Charts" class="img-fluid rounded-3 shadow">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="dashboards" role="tabpanel">
+          <div class="data-visualization">
+            <div class="row align-items-center">
+              <div class="col-md-6">
+                <h3>Executive Dashboards</h3>
+                <p>Comprehensive dashboards that provide at-a-glance business intelligence:</p>
+                <ul>
+                  <li>Key performance indicators (KPIs)</li>
+                  <li>Interactive filters and slicers</li>
+                  <li>Real-time data connections</li>
+                  <li>Mobile-friendly designs</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                     alt="Excel Dashboard" class="img-fluid rounded-3 shadow">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="reports" role="tabpanel">
+          <div class="data-visualization">
+            <div class="row align-items-center">
+              <div class="col-md-6">
+                <h3>Automated Reports</h3>
+                <p>Professional reports that save you hours of manual work:</p>
+                <ul>
+                  <li>Scheduled report generation</li>
+                  <li>PDF/Excel output options</li>
+                  <li>Branded templates</li>
+                  <li>Email distribution setup</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1415&q=80" 
+                     alt="Excel Reports" class="img-fluid rounded-3 shadow">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-5 bg-primary text-white">
+    <div class="container text-center">
+      <div class="row justify-content-center">
+        <div class="col-lg-8" data-aos="fade-up">
+          <h2 class="display-5 fw-bold mb-4">Ready to Transform Your Data?</h2>
+          <p class="lead mb-4">Let us handle your Excel needs so you can focus on what matters most - your business.</p>
+          <div class="d-flex justify-content-center gap-3">
+            <a href="https://wa.me/254700800275" class="btn btn-light btn-lg px-4" target="_blank">
+              <i class="fab fa-whatsapp me-2"></i> Chat Now
+            </a>
+            <a href="../contact.html" class="btn btn-outline-light btn-lg px-4">
+              <i class="fas fa-envelope me-2"></i> Email Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-4 bg-dark text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <img src="assets/logo.png" alt="Meike Quick Cyber Logo" height="50" class="mb-3">
+          <p>Your trusted partner for professional data services in Kenya.</p>
+        </div>
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <h3 class="h5 mb-3">Quick Links</h3>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="../index.html" class="text-white-50">Home</a></li>
+            <li class="mb-2"><a href="../services.html" class="text-white-50">Services</a></li>
+            <li><a href="../contact.html" class="text-white-50">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h3 class="h5 mb-3">Contact</h3>
+          <ul class="list-unstyled">
+            <li class="mb-2"><i class="fas fa-phone me-2"></i> +254 700 800 275</li>
+            <li class="mb-2"><i class="fas fa-envelope me-2"></i> meikequickcyber@gmail.com</li>
+            <li><i class="fas fa-map-marker-alt me-2"></i> Nairobi, Kenya</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="my-4 bg-secondary">
+      <div class="text-center">
+        <p class="mb-0 small">&copy; 2025 Meike Quick Cyber. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Initialize AOS animation
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true
+    });
+
+    // Floating animation for hero image
+    document.addEventListener('DOMContentLoaded', function() {
+      const floating = document.querySelector('.floating');
+      if (floating) {
+        function animate() {
+          floating.style.transform = `translateY(${Math.sin(Date.now() / 1000) * 10}px)`;
+          requestAnimationFrame(animate);
+        }
+        animate();
+      }
+    });
+  </script>
+</body>
+</html>

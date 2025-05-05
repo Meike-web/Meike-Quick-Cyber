@@ -1,0 +1,92 @@
+/* Base Card Animation */
+.service-card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+/* Hover Effect */
+.service-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Image Zoom Effect on Hover */
+.service-card img {
+  transition: transform 0.5s ease;
+  border-bottom: 1px solid #eee;
+}
+
+.service-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Button Glow on Hover */
+.service-card .btn {
+  transition: all 0.3s ease-in-out;
+}
+
+.service-card .btn:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Title Smooth Reveal */
+.service-card .card-title {
+  transition: color 0.3s ease;
+}
+
+.service-card:hover .card-title {
+  color: #007bff; /* Bootstrap primary color */
+}
+
+
+.service-card {
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.service-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.service-card img {
+  transition: transform 0.4s ease;
+  border-bottom: 1px solid #eee;
+}
+
+.service-card:hover img {
+  transform: scale(1.05);
+}
+
+.service-card .btn {
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.service-card .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+}
+
+.text-center mb-5{
+  padding-top: 120px;
+  font-size: x-large;
+}
+
+.our-services{
+  color: rgb(255, 166, 0);
+  font-weight: bold;
+}
+
+.our-services:hover{
+  color: rgb(18, 219, 18);
+  text-decoration: double;
+  transition: 0.5s;
+}

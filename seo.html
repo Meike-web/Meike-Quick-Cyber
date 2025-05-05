@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional SEO Services | Meike Quick Cyber</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4361ee;
+            --secondary: #3f37c9;
+            --accent: #4cc9f0;
+            --dark: #212529;
+            --light: #f8f9fa;
+            --success: #4bb543;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7ff;
+            color: var(--dark);
+            overflow-x: hidden;
+        }
+        
+        /* Animated background elements */
+        .bg-circle {
+            position: fixed;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(67,97,238,0.15) 0%, rgba(255,255,255,0) 70%);
+            z-index: -1;
+            animation: float 15s infinite ease-in-out;
+        }
+        
+        .circle-1 {
+            width: 300px;
+            height: 300px;
+            top: -50px;
+            left: -50px;
+            animation-delay: 0s;
+        }
+        
+        .circle-2 {
+            width: 450px;
+            height: 450px;
+            bottom: -100px;
+            right: -100px;
+            animation-delay: 3s;
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translate(0, 0);
+            }
+            50% {
+                transform: translate(20px, 20px);
+            }
+        }
+        
+        /* Header styles */
+        header {
+    background: linear-gradient(135deg, #2a3a8f, #4361ee);
+    color: white;
+    padding: 3rem 1rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.15);
+    border-bottom: 5px solid #4cc9f0;
+}
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .logo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    display: inline-block;
+    background: rgba(255,255,255,0.9);
+    color: #2a3a8f;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    animation: fadeInDown 1s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tagline {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    animation: fadeIn 1.5s ease;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #4cc9f0;
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(76,201,240,0.3);
+    animation: pulse 2s infinite;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid white;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(76,201,240,0.4);
+    background-color: #3ab7e0;
+}
+
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        /* Main content */
+        .container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+        
+        section {
+            margin-bottom: 4rem;
+            background: white;
+            border-radius: 15px;
+            padding: 2.5rem;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        section:hover {
+            transform: translateY(-5px);
+        }
+        
+        section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary), var(--accent));
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+        }
+        
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            margin: 1.5rem 0;
+            color: var(--secondary);
+        }
+        
+        h3 {
+            font-size: 1.4rem;
+            margin: 1.2rem 0;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+        }
+        
+        h3 i {
+            margin-right: 10px;
+            color: var(--accent);
+        }
+        
+        p {
+            line-height: 1.8;
+            margin-bottom: 1.2rem;
+            color: #555;
+        }
+        
+        ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        li {
+            margin-bottom: 0.8rem;
+            line-height: 1.6;
+            position: relative;
+        }
+        
+        li::before {
+            content: '✓';
+            color: var(--success);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        /* Service cards */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .service-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Combo offer section */
+        .combo-section {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+            border-radius: 15px;
+            margin-top: 4rem;
+        }
+        
+        .combo-section h2 {
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+        
+        .combo-section p {
+            color: rgba(255,255,255,0.9);
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
+        .combo-options {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .combo-option {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 10px;
+            padding: 1.5rem;
+            width: 280px;
+            transition: all 0.3s ease;
+        }
+        
+        .combo-option:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-5px);
+        }
+        
+        .combo-option h3 {
+            color: white;
+        }
+        
+        /* Contact section */
+        .contact-section {
+            text-align: center;
+            margin-top: 4rem;
+        }
+        
+        .contact-methods {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .contact-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .contact-icon {
+            font-size: 1.8rem;
+            color: var(--primary);
+        }
+        
+        .contact-info h3 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+        
+        .contact-info a {
+            color: var(--dark);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-info a:hover {
+            color: var(--primary);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 4rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .social-links {
+            margin: 1.5rem 0;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--accent);
+        }
+        
+        .copyright {
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate {
+            opacity: 0;
+            animation: fadeIn 1s ease forwards;
+        }
+        
+        .delay-1 {
+            animation-delay: 0.3s;
+        }
+        
+        .delay-2 {
+            animation-delay: 0.6s;
+        }
+        
+        .delay-3 {
+            animation-delay: 0.9s;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            section {
+                padding: 1.5rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-methods {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+                /* --- Floating Back Button Styles --- */
+
+        /* Style the button itself */
+        #floatingBackButton {
+            position: fixed; /* Keep it in the same place even when scrolling */
+            bottom: 25px;    /* Distance from the bottom */
+            right: 25px;     /* Distance from the right */
+            z-index: 999;    /* Ensure it's above most other elements */
+
+            background-color: #6c5ce7; /* Use your primary color */
+            color: white;           /* Text/icon color */
+            border: none;           /* Remove default border */
+            border-radius: 50%;     /* Make it circular */
+            width: 55px;            /* Set width */
+            height: 55px;           /* Set height */
+
+            font-size: 1.3rem;       /* Icon size */
+            text-align: center;     /* Center the icon */
+            line-height: 55px;      /* Vertically center icon (match height) */
+
+            cursor: pointer;        /* Indicate it's clickable */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+
+            /* Ensure icon is centered if line-height doesn't work perfectly */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Style for when hovering over the button */
+        #floatingBackButton:hover {
+            background-color: #483db4; /* Darken the color on hover (adjust as needed) */
+            transform: scale(1.05);  /* Slightly enlarge on hover */
+        }
+
+        /* Style for when the button is actively clicked */
+        #floatingBackButton:active {
+            transform: scale(0.95); /* Slightly shrink when clicked */
+        }
+
+        /* --- Basic Page Styles (for demonstration) --- */
+        body {
+            font-family: sans-serif;
+            min-height: 150vh; /* Make page scrollable to see the button stay fixed */
+            padding: 20px;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- Animated background elements -->
+    <div class="bg-circle circle-1"></div>
+    <div class="bg-circle circle-2"></div>
+    
+<!-- Header -->
+<header>
+    <div class="header-content">
+        <a class="navbar-brand" href="index.html">
+            <img src="assets/logo.png" alt="TechSavvy Cyber Logo" style="height: 150px;" class="logo-hover logo-img transition-logo">
+        </a>
+        <h1 class="animate delay-1" style="color: #4bb543;">Professional SEO Services</h1>
+        <p class="tagline animate delay-2" style="color: #f5f7ff;">Get found by more customers and grow your business with our expert SEO strategies</p>
+        <a href="#contact" class="cta-button animate delay-3">Get Started Today</a>
+    </div>
+</header>
+    
+    <!-- Main content -->
+    <div class="container">
+        <section class="animate">
+            <h2>Boost Your Online Visibility</h2>
+            <p>At <strong>Meike Quick Cyber</strong>, we specialize in helping businesses like yours rank higher on Google and other search engines. Our tailored SEO strategies drive <strong>more organic traffic, better leads, and increased sales</strong> to your website.</p>
+            
+            <div class="services-grid">
+                <div class="service-card animate delay-1">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Website SEO Audit</h3>
+                    <p>Comprehensive analysis of your website's technical health, content quality, and backlink profile with actionable recommendations.</p>
+                </div>
+                
+                <div class="service-card animate delay-2">
+                    <div class="service-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h3>Keyword Research</h3>
+                    <p>Identify the most valuable search terms your potential customers are using to find businesses like yours.</p>
+                </div>
+                
+                <div class="service-card animate delay-3">
+                    <div class="service-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>On-Page SEO</h3>
+                    <p>Optimization of page titles, meta descriptions, headers, and content structure for maximum search visibility.</p>
+                </div>
+                
+                <div class="service-card animate delay-1">
+                    <div class="service-icon">
+                        <i class="fas fa-pen-fancy"></i>
+                    </div>
+                    <h3>Content SEO</h3>
+                    <p>Creation and optimization of blog posts, product pages, and other content to rank for targeted keywords.</p>
+                </div>
+                
+                <div class="service-card animate delay-2">
+                    <div class="service-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Local SEO</h3>
+                    <p>Optimize your Google Business Profile and local listings to appear in "near me" searches and local map results.</p>
+                </div>
+                
+                <div class="service-card animate delay-3">
+                    <div class="service-icon">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <h3>Backlink Building</h3>
+                    <p>Strategic acquisition of high-quality backlinks from authoritative websites to boost your domain authority.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="animate">
+            <h2>Important Note</h2>
+            <p><strong>Our SEO services work best with custom-built websites</strong> (HTML, CSS, JavaScript). If you're using platforms like WordPress, Wix, or Shopify, please let us know in advance so we can confirm compatibility with your specific setup.</p>
+        </section>
+        
+        <div class="combo-section animate">
+            <h2>Supercharge Your Results With Our Combo Packages!</h2>
+            <p>Pair our SEO services with complementary solutions for maximum impact on your online presence and business growth.</p>
+            
+            <div class="combo-options">
+                <div class="combo-option animate delay-1">
+                    <h3><i class="fas fa-code"></i> SEO + Website Development</h3>
+                    <p>Get a brand new custom website built with SEO best practices from the ground up.</p>
+                </div>
+                
+                <div class="combo-option animate delay-2">
+                    <h3><i class="fas fa-pencil-alt"></i> SEO + Content Creation</h3>
+                    <p>High-quality, search-optimized content tailored to your target audience.</p>
+                </div>
+                
+                <div class="combo-option animate delay-3">
+                    <h3><i class="fas fa-bolt"></i> SEO + Speed Optimization</h3>
+                    <p>Lightning-fast website performance combined with SEO for maximum rankings.</p>
+                </div>
+            </div>
+        </div>
+        
+        <section id="contact" class="contact-section animate">
+            <h2>Ready to Grow Your Business?</h2>
+            <p>Contact us today to discuss how we can help improve your search rankings and drive more traffic to your website.</p>
+            
+            <div class="contact-methods">
+                <div class="contact-card animate delay-1">
+                    <div class="contact-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <div class="contact-info">
+                        <h3>WhatsApp</h3>
+                        <a href="https://wa.me/254700800275" target="_blank">+254 700 800 275</a>
+                    </div>
+                </div>
+                
+                <div class="contact-card animate delay-2">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-info">
+                        <h3>Email</h3>
+                        <a href="mailto:meikequickcyber@gmail.com">meikequickcyber@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="animate">
+        <div class="footer-content">
+            <div class="logo">Meike Quick Cyber</div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p class="copyright">© 2025 Meike Quick Cyber. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <button id="floatingBackButton" title="Go Back">
+        <i class="fas fa-arrow-left"></i> </button>
+
+    <script>
+        // --- Floating Back Button JavaScript ---
+
+        // Get the button element by its ID
+        const backButton = document.getElementById('floatingBackButton');
+
+        // Check if the button exists on the page
+        if (backButton) {
+            // Add an event listener for the 'click' event
+            backButton.addEventListener('click', () => {
+                // Use the browser's history object to go back one step
+                window.history.back();
+            });
+        } else {
+            console.error("Floating back button element not found.");
+        }
+    </script>
+
+
+    <script>
+        // Simple animation trigger on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateElements = document.querySelectorAll('.animate');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            animateElements.forEach(element => {
+                observer.observe(element);
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

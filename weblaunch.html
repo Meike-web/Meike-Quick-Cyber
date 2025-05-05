@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebLaunch - Frontend Web Design | Meike Quick Cyber</title>
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="../css/services.css" rel="stylesheet">
+  <link href="css/weblaunch.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="assets/logo.png" alt="Meike Quick Cyber Logo" height="50" class="img-fluid" />
+    </a>
+    <button
+      class="navbar-toggler border-0"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="services.html">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+      <div class="ms-lg-3 mt-3 mt-lg-0">
+        <a href="https://wa.me/254700800275" class="btn btn-success">
+          <i class="fab fa-whatsapp me-2"></i> Get Help
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Custom CSS -->
+<style>
+  /* Navbar styling */
+  .navbar {
+    padding: 0.75rem 1rem;
+  }
+  
+  /* Visible toggle button */
+  .navbar-toggler {
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.25);
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    width: 1.25em;
+    height: 1.25em;
+  }
+  
+  /* Mobile menu styling */
+  @media (max-width: 991.98px) {
+    .navbar-collapse {
+      background-color: white;
+      padding: 1rem;
+      margin-top: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    .nav-item {
+      margin-bottom: 0.5rem;
+    }
+    
+    .nav-link {
+      padding: 0.5rem 1rem !important;
+      border-radius: 4px;
+    }
+    
+    .nav-link:hover,
+    .nav-link.active {
+      background-color: rgba(0,0,0,0.05);
+    }
+  }
+  
+  /* Logo sizing */
+  .navbar-brand img {
+    height: 50px;
+    width: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .navbar-brand:hover img {
+    transform: scale(1.05);
+  }
+  
+  @media (min-width: 992px) {
+    .navbar-brand img {
+      height: 70px;
+    }
+  }
+</style>
+  <!-- Hero Section -->
+  <section class="weblaunch-hero">
+    <div class="container">
+      <div class="row align-items-center min-vh-80 py-5">
+        <div class="col-lg-6" data-aos="fade-right">
+          <h1 class="display-4 fw-bold mb-4">WebLaunch</h1>
+          <p class="lead mb-4">Transform your online presence with stunning, high-performance frontend designs that captivate and convert.</p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="#portfolio" class="btn btn-primary btn-lg px-4">
+              <i class="fas fa-eye me-2"></i> View Samples
+            </a>
+            <a href="https://wa.me/254700800275" class="btn btn-outline-light btn-lg px-4">
+              <i class="fab fa-whatsapp me-2"></i> Get Started
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="hero-image-container">
+            <img src="assets/webdesign.jpg" alt="Web Design Illustration" class="img-fluid floating">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Importance Section -->
+  <section class="importance-section py-5 bg-light">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10 text-center mb-5" data-aos="fade-up">
+          <h2 class="display-5 fw-bold mb-4">Why Web Design Matters</h2>
+          <p class="lead">Your website is your digital storefront - often the first impression potential customers have of your business.</p>
+        </div>
+      </div>
+      <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card importance-card h-100 hover-scale">
+            <div class="card-body p-4 text-center">
+              <div class="icon-container mb-4">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <h3 class="h4">Business Growth</h3>
+              <p>A well-designed website increases credibility and helps convert visitors into customers, directly impacting your bottom line.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="card importance-card h-100 hover-scale">
+            <div class="card-body p-4 text-center">
+              <div class="icon-container mb-4">
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+              <h3 class="h4">Mobile Experience</h3>
+              <p>With over 60% of web traffic coming from mobile devices, responsive design is no longer optional - it's essential.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="card importance-card h-100 hover-scale">
+            <div class="card-body p-4 text-center">
+              <div class="icon-container mb-4">
+                <i class="fas fa-bolt"></i>
+              </div>
+              <h3 class="h4">Performance</h3>
+              <p>Fast-loading websites reduce bounce rates and improve search rankings, keeping visitors engaged.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio-section py-5">
+    <div class="container">
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-8 text-center" data-aos="fade-up">
+          <h2 class="display-5 fw-bold mb-3">Our Frontend Design Portfolio</h2>
+          <p class="lead">Beautiful, functional designs tailored to each client's needs</p>
+        </div>
+      </div>
+      <div class="row g-4">
+        <!-- Portfolio Item 1 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="portfolio-item">
+            <div class="portfolio-img-container">
+              <img src="assets/businessportfolio.jpg" alt="Business Portfolio" class="img-fluid">
+              <div class="portfolio-overlay">
+                <div class="overlay-content">
+                  <h3>Business Portfolio</h3>
+                  <p>Clean, professional design for consultants</p>
+                  <a href="businessportfolio.html" class="btn btn-outline-light btn-sm">View Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Portfolio Item 3 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="portfolio-item">
+            <div class="portfolio-img-container">
+              <img src="assets/restaurant.jpg" alt="Restaurant Website" class="img-fluid">
+              <div class="portfolio-overlay">
+                <div class="overlay-content">
+                  <h3>Restaurant Website</h3>
+                  <p>Appetizing design for food businesses</p>
+                  <a href="restaurant.html" class="btn btn-outline-light btn-sm">View Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="process-section py-5 bg-light">
+    <div class="container">
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-8 text-center" data-aos="fade-up">
+          <h2 class="display-5 fw-bold mb-3">Our Frontend Design Process</h2>
+          <p>Simple steps to your stunning new website</p>
+        </div>
+      </div>
+      <div class="row g-4">
+        <!-- Step 1 -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="process-card text-center p-4">
+            <div class="step-number">1</div>
+            <i class="fas fa-comments process-icon"></i>
+            <h3 class="h4 mt-3">Consultation</h3>
+            <p>We discuss your goals, target audience, and design preferences</p>
+          </div>
+        </div>
+        <!-- Step 2 -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="process-card text-center p-4">
+            <div class="step-number">2</div>
+            <i class="fas fa-palette process-icon"></i>
+            <h3 class="h4 mt-3">Design Mockup</h3>
+            <p>You receive a custom design concept for approval</p>
+          </div>
+        </div>
+        <!-- Step 3 -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="process-card text-center p-4">
+            <div class="step-number">3</div>
+            <i class="fas fa-code process-icon"></i>
+            <h3 class="h4 mt-3">Development</h3>
+            <p>We build your responsive frontend with clean, efficient code</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+    
+        <section class="cta-section py-5 bg-primary text-white">
+        <div class="container text-center">
+          <div class="row justify-content-center">
+            <div class="col-lg-8" data-aos="fade-up">
+              <h2 class="display-5 fw-bold mb-4">Ready to Launch Your Website?</h2>
+              <p class="lead mb-4">Let's create a frontend that wows your visitors and grows your business</p>
+              <div class="d-flex justify-content-center gap-3">
+                <a href="https://wa.me/254700800275" class="btn btn-light btn-lg px-4 hover-grow">
+                  <i class="fab fa-whatsapp me-2"></i> Chat Now
+                </a>
+                <a href="../contact.html" class="btn btn-outline-light btn-lg px-4 hover-grow">
+                  <i class="fas fa-envelope me-2"></i> Email Us
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+  <!-- Footer -->
+  <footer class="footer py-4 bg-dark text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <img src="../assets/logo.png" alt="Meike Quick Cyber Logo" height="60" class="mb-3">
+          <p>Your trusted partner for professional web design in Kenya.</p>
+        </div>
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <h3 class="h5 mb-3">Quick Links</h3>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="../index.html" class="text-white-50">Home</a></li>
+            <li class="mb-2"><a href="../services.html" class="text-white-50">Services</a></li>
+            <li><a href="../contact.html" class="text-white-50">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h3 class="h5 mb-3">Contact</h3>
+          <ul class="list-unstyled">
+            <li class="mb-2"><i class="fas fa-phone me-2"></i> +254 700 800 275</li>
+            <li class="mb-2"><i class="fas fa-envelope me-2"></i> meikequickcyber@gmail.com</li>
+            <li><i class="fas fa-map-marker-alt me-2"></i> Nairobi, Kenya</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="my-4 bg-secondary">
+      <div class="text-center">
+        <p class="mb-0 small">&copy; 2023 Meike Quick Cyber. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Initialize AOS animation
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true
+    });
+
+    // Floating animation for hero image
+    document.addEventListener('DOMContentLoaded', function() {
+      const floating = document.querySelector('.floating');
+      if (floating) {
+        function animate() {
+          floating.style.transform = `translateY(${Math.sin(Date.now() / 1000) * 10}px)`;
+          requestAnimationFrame(animate);
+        }
+        animate();
+      }
+    });
+  </script>
+  
+</body>
+</html>

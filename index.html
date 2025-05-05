@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEIKE QUICK CYBER | ONLINE CYBER SERVICES</title>
+    <link rel="icon" href="assets/logo.png" type="image/png">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+</head>
+<body>
+<!-- Navigation -->
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm transition-navbar">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="assets/logo.png" alt="TechSavvy Cyber Logo" class="logo-hover logo-img transition-logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item mx-2">
+                    <a class="nav-link btn-nav" href="index.html">
+                        <span class="nav-link-text">Home</span>
+                    </a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link btn-nav" href="services.html">
+                        <span class="nav-link-text">Services</span>
+                    </a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link btn-nav" href="contact.html">
+                        <span class="nav-link-text">Contact</span>
+                    </a>
+                </li>
+                <li class="nav-item ms-3">
+                    <a href="https://wa.me/254700800275" class="nav-cta-btn btn-whatsapp pulse-on-hover" target="_blank">
+                        <i class="fab fa-whatsapp me-2"></i> Get Help
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    
+    <style>
+        /* Modern Button Styles */
+        .btn-nav {
+            position: relative;
+            padding: 10px 20px;
+            border-radius: 30px;
+            color: #2c3e50;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            border: none;
+            background: transparent;
+        }
+        
+        .btn-nav:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(74, 144, 226, 0.1) 0%, rgba(74, 144, 226, 0.2) 100%);
+            border-radius: 30px;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+            z-index: -1;
+        }
+        
+        .btn-nav:hover {
+            color: #4a90e2;
+            transform: translateY(-2px);
+        }
+        
+        .btn-nav:hover:before {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+        
+        .btn-nav.active {
+            color: #4a90e2;
+            font-weight: 600;
+        }
+        
+        .btn-nav.active:before {
+            transform: scaleX(1);
+            background: linear-gradient(135deg, rgba(74, 144, 226, 0.2) 0%, rgba(74, 144, 226, 0.3) 100%);
+        }
+        
+        /* WhatsApp CTA Button */
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            border: none;
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .btn-whatsapp:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+            color: white;
+        }
+        
+        .pulse-on-hover:hover {
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+    </style>
+<!-- Hero Section with Background Image & Gradient -->
+<section section id="hero" class="hero-section text-white position-relative">
+    <!-- Background Image with Gradient Overlay -->
+    <div class="hero-background">
+        <img src="assets/home.jpg" alt="Cyber Services" height="1000px" class="img-fluid w-100 h-100 object-cover">
+        <div class="gradient-overlay"></div>
+    </div>
+    
+    <!-- Content -->
+    <div class="container position-relative py-5" style="z-index: 2;">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <!-- Updated Headline with Business Name and Main Services -->
+                <h1 class="display-4 fw-bold mb-4">Welcome to Meike Quick Cyber</h1>
+                <p class="lead mb-4">
+                    Expert <span class="highlight-text">Web Design</span>, <span class="highlight-text">Graphic Design</span>, 
+                    and fast-track <span class="highlight-text">Government Services</span> like 
+                    <span class="highlight-text">KUCCPS</span>, <span class="highlight-text">HELB</span>, and more—all in one place.
+                </p>
+                <div class="d-flex flex-wrap gap-3">
+                    <a href="https://wa.me/254700800275" class="btn btn-light btn-lg px-4">
+                        <i class="fab fa-whatsapp"></i> WhatsApp Now
+                    </a>
+                    <a href="tel:+254700800275" class="btn btn-outline-light btn-lg px-4 hover-grow">
+                        <i class="fas fa-phone"></i> Call Now
+                    </a>
+                    <!-- New Modern Services Button -->
+                    <a href="services.html" class="btn btn-services btn-lg px-4">
+                        <span class="btn-icon-wrapper">
+                            <i class="fas fa-eye me-2"></i>
+                        </span>
+                        View Our Services
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Modern Services Button Styles */
+    .btn-services {
+        position: relative;
+        background: linear-gradient(135deg, #6e48aa 0%, #9d50bb 100%);
+        color: white;
+        border: none;
+        border-radius: 50px;
+        font-weight: 600;
+        overflow: hidden;
+        transition: all 0.4s ease;
+        box-shadow: 0 4px 15px rgba(110, 72, 170, 0.3);
+        z-index: 1;
+    }
+    
+    .btn-services:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #9d50bb 0%, #6e48aa 100%);
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        z-index: -1;
+    }
+    
+    .btn-services:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(110, 72, 170, 0.4);
+        color: white;
+    }
+    
+    .btn-services:hover:before {
+        opacity: 1;
+    }
+    
+    .btn-icon-wrapper {
+        display: inline-block;
+        transition: transform 0.3s ease;
+    }
+    
+    .btn-services:hover .btn-icon-wrapper {
+        transform: translateX(3px);
+    }
+    
+    /* Existing hover-grow effect for consistency */
+    .hover-grow {
+        transition: all 0.3s ease;
+    }
+    
+    .hover-grow:hover {
+        transform: scale(1.05);
+    }
+</style>
+
+
+
+    <!-- Trust Badges -->
+    <section class="trust-section py-4 bg-light">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4 mb-3 mb-md-0" data-aos="fade-up" data-aos-delay="100">
+                    <div class="trust-badge hover-bounce">
+                        <i class="fas fa-check-circle text-success fa-2x mb-2"></i>
+                        <h3 class="h5">500+ Applications</h3>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0" data-aos="fade-up" data-aos-delay="200">
+                    <div class="trust-badge hover-bounce">
+                        <i class="fas fa-clock text-primary fa-2x mb-2"></i>
+                        <h3 class="h5">24-Hour Service</h3>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="trust-badge hover-bounce">
+                        <i class="fas fa-shield-alt text-warning fa-2x mb-2"></i>
+                        <h3 class="h5">100% Approval Guarantee</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-5" data-aos="fade-up">Our Popular Services</h2>
+            <div class="row g-4">
+                <!-- Service 1 -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card service-card h-100 shadow-sm hover-float">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon mb-3">
+                                <i class="fas fa-university fa-3x text-primary"></i>
+                            </div>
+                            <h3 class="h4">HELB Applications</h3>
+                            <p>Get your loan approved fast without mistakes.</p>
+                            <a href="quickgov.html#services" class="btn btn-outline-primary hover-grow">From KSh 500</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service 2 -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card service-card h-100 shadow-sm hover-float">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon mb-3">
+                                <i class="fas fa-graduation-cap fa-3x text-success"></i>
+                            </div>
+                            <h3 class="h4">KUCCPS Revision</h3>
+                            <p>Optimize your course choices for your dream career.</p>
+                            <a href="quickgov.html#services" class="btn btn-outline-success hover-grow">From KSh 300</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service 3 -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card service-card h-100 shadow-sm hover-float">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon mb-3">
+                                <i class="fas fa-file-alt fa-3x text-info"></i>
+                            </div>
+                            <h3 class="h4">KRA PIN Registration</h3>
+                            <p>Done in 1 hour with instant certificate.</p>
+                            <a href="quickgov.html#services" class="btn btn-outline-info hover-grow">KSh 150</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="steps-section py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5" data-aos="fade-up">How It Works</h2>
+            <div class="row g-4 text-center">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-card p-4 hover-scale">
+                        <div class="step-number pulse">1</div>
+                        <i class="fas fa-comment-dots fa-3x text-primary mb-3"></i>
+                        <h3 class="h4">Contact Us</h3>
+                        <p>WhatsApp your details to +254 700 800 275.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-card p-4 hover-scale">
+                        <div class="step-number pulse">2</div>
+                        <i class="fas fa-money-bill-wave fa-3x text-success mb-3"></i>
+                        <h3 class="h4">Secure Payment</h3>
+                        <p>Pay via M-Pesa (instant confirmation).</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-card p-4 hover-scale">
+                        <div class="step-number pulse">3</div>
+                        <i class="fas fa-check-circle fa-3x text-warning mb-3"></i>
+                        <h3 class="h4">Done for You</h3>
+                        <p>We submit everything + send proof.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-5" data-aos="fade-up">What Our Clients Say</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4" data-aos="fade-right">
+                    <div class="testimonial-card p-4 h-100 hover-glow">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="assets/martin.jpg" alt="Client" class="rounded-circle me-3" width="60">
+                            <div>
+                                <h4 class="h5 mb-0">Martin Kitonga</h4>
+                                <small class="text-muted">University of Nairobi</small>
+                            </div>
+                        </div>
+                        <p class="mb-0">"Meike Quick Cyber saved me from HELB rejection! Got my application perfectly and remotely with their help."</p>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="testimonial-card p-4 h-100 hover-glow">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="assets/waweru.jpg" alt="Client" class="rounded-circle me-3" width="60">
+                            <div>
+                                <h4 class="h5 mb-0">Zacharia Waweru</h4>
+                                <small class="text-muted">University of Embu</small>
+                            </div>
+                        </div>
+                        <p class="mb-0">"They revised my KUCCPS choices—now I'm studying Finance! Worth every shilling."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="cta-section py-5 bg-primary text-white">
+        <div class="container text-center">
+            <h2 class="mb-4" data-aos="fade-up">Don't Miss Out—Limited Slots Daily!</h2>
+            <p class="lead mb-4" data-aos="fade-up" data-aos-delay="100">We only handle 20 applications per day for quality service.</p>
+            <div class="d-flex justify-content-center gap-3" data-aos="fade-up" data-aos-delay="200">
+                <a href="https://wa.me/254700800275" class="btn btn-light btn-lg px-4 hover-grow">
+                    <i class="fab fa-whatsapp"></i> Chat Now
+                </a>
+                <a href="tel:+254700800275" class="btn btn-outline-light btn-lg px-4 hover-grow">
+                    <i class="fas fa-phone"></i> Call Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4 bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0" data-aos="fade-up">
+                 
+                    <p>Your reliable partner for creative web design, impactful graphic design, and smart SEO solutions in Kenya.</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-3 hover-grow"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3 hover-grow"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3 hover-grow"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@himtechcreations" target="_blank" class="text-white hover-grow"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="h5 mb-3">Services</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="quickgov.html#services" class="text-white-50 hover-underline">HELB</a></li>
+                        <li class="mb-2"><a href="quickgov.html#services" class="text-white-50 hover-underline">KUCCPS</a></li>
+                        <li class="mb-2"><a href="quickgov.html#services" class="text-white-50 hover-underline">KRA PIN</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="h5 mb-3">Company</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white-50 hover-underline">About Us</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-white-50 hover-underline">Contact</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 hover-underline">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="h5 mb-3">Contact Info</h3>
+                    <ul class="list-unstyled text-white-50">
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> +254 700 800 275</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> meikequickcyber@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt me-2"></i> Nairobi, Kenya</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 Meike Quick Cyber. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+    <script>
+        // Initialize AOS animation
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true, // Animations only happen once
+            mirror: false
+        });
+
+        // Mobile menu animation
+        document.querySelector('.navbar-toggler').addEventListener('click', function() {
+            this.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

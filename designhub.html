@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DesignHub | Premium Graphic Design by Meike Quick Cyber</title>
+    <meta name="description" content="Professional graphic design services for businesses and events. Logo design, posters, flyers, and branding solutions.">
+    <link rel="stylesheet" href="css/designhub.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="assets/logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+
+    <style>
+        /* Floating WhatsApp Button Styles */
+        .floating-whatsapp-btn {
+          position: fixed;
+          bottom: 30px;
+          right: 30px;
+          background-color: #25D366; /* WhatsApp green */
+          color: white;
+          width: 60px;
+          height: 60px;
+          border-radius: 50px;
+          text-align: center;
+          box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-decoration: none;
+          transition: all 0.3s ease;
+          z-index: 999;
+          overflow: hidden;
+        }
+        
+        .floating-whatsapp-btn i {
+          font-size: 28px;
+          margin-top: 8px;
+        }
+        
+        .floating-whatsapp-btn span {
+          font-size: 12px;
+          font-weight: 600;
+          display: none;
+          margin-top: -5px;
+          margin-bottom: 8px;
+        }
+        
+        .floating-whatsapp-btn:hover {
+          width: 140px;
+          height: 60px;
+          background-color: #128C7E; /* Darker WhatsApp green */
+        }
+        
+        .floating-whatsapp-btn:hover span {
+          display: block;
+          animation: fadeIn 0.3s ease;
+        }
+        
+        @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+
+
+
+        /* Floating Buttons Container */
+  .floating-back-btn,
+  .floating-whatsapp-btn {
+    position: fixed;
+    right: 30px;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    z-index: 999;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Back Button Specific Styles */
+  .floating-back-btn {
+    bottom: 100px;
+    background-color: #4361ee;
+  }
+  
+  .floating-back-btn:hover {
+    background-color: #3a56d4;
+  }
+  
+  /* WhatsApp Button Specific Styles */
+  .floating-whatsapp-btn {
+    bottom: 30px;
+    background-color: #25D366;
+  }
+  
+  .floating-whatsapp-btn:hover {
+    background-color: #128C7E;
+  }
+  
+  /* Common Icon Styles */
+  .floating-back-btn i,
+  .floating-whatsapp-btn i {
+    font-size: 28px;
+    margin-top: 8px;
+  }
+  
+  /* Common Text Styles */
+  .floating-back-btn span,
+  .floating-whatsapp-btn span {
+    font-size: 12px;
+    font-weight: 600;
+    display: none;
+    margin-top: -5px;
+    margin-bottom: 8px;
+  }
+  
+  /* Hover Effects */
+  .floating-back-btn:hover,
+  .floating-whatsapp-btn:hover {
+    width: 140px;
+    height: 60px;
+  }
+  
+  .floating-back-btn:hover span,
+  .floating-whatsapp-btn:hover span {
+    display: block;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .designhomepic{
+    width: 30%;
+    border-radius: 10px;
+}
+
+
+      </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="glass-header">
+        <div class="container">
+            <div class="logo">
+                <h1><a href="#hero">Design<span>Hub</span></a></h1>
+                <p class="tagline">by Meike Quick Cyber</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#services"><i class="fas fa-palette"></i> Services</a></li>
+                    <li><a href="#portfolio"><i class="fas fa-images"></i> Portfolio</a></li>
+                    <li><a href="#process"><i class="fas fa-cogs"></i> Process</a></li>
+                    <li><a href="#contact" class="nav-cta"><i class="fas fa-paper-plane"></i> Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+<!-- Hero Section -->
+<!-- Hero Section -->
+<section id="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+        
+        <!-- Left Side: Text Content -->
+        <div class="hero-text" style="flex: 1 1 50%; padding: 20px;">
+            <h2>Transform Your Brand with <span>Stunning Visuals</span></h2>
+            <p>Professional graphic design that captures attention and communicates your message effectively. Serving businesses and individuals in Embu and beyond.</p>
+            <div class="hero-btns">
+                <a href="#contact" class="btn btn-primary">Get Your Free Quote</a>
+                <a href="#portfolio" class="btn btn-outline">See Our Work</a>
+            </div>
+
+            <!-- Stats -->
+            <div class="hero-stats" style="margin-top: 30px;">
+                <div class="stat-item">
+                    <div class="stat-number" data-count="43">0</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="98">0</div>
+                    <div class="stat-label">% Satisfied Clients</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="2">0</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side: Image -->
+        <div class="hero-image" style="flex: 1 1 40%; text-align: center;">
+            <img src="assets/designhomepic.png" alt="Graphic Design Sample" style="max-width: 100%; height: auto;" />
+        </div>
+
+    </div>
+</section>
+
+
+
+    <!-- Services Section -->
+    <section id="services" class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our <span>Design Services</span></h2>
+                <p class="section-subtitle">Professional design solutions tailored to your needs</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>Poster Design</h3>
+                    <p>Eye-catching posters that demand attention for your events, sales, and promotions.</p>
+                    <ul class="service-features">
+                        <li>Print-ready files</li>
+                        <li>Social media versions</li>
+                        <li>Multiple design concepts</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-flag"></i>
+                    </div>
+                    <h3>Logo & Branding</h3>
+                    <p>Memorable logos and complete branding packages to establish your identity.</p>
+                    <ul class="service-features">
+                        <li>Multiple concepts</li>
+                        <li>Color palette selection</li>
+                        <li>Full brand guidelines</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-scroll"></i>
+                    </div>
+                    <h3>Flyers & Banners</h3>
+                    <p>Professional marketing materials that convert viewers into customers.</p>
+                    <ul class="service-features">
+                        <li>Print and digital formats</li>
+                        <li>High-resolution files</li>
+                        <li>Quick turnaround</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <h3>Business Stationery</h3>
+                    <p>Business cards, letterheads, and envelopes that make professional impressions.</p>
+                    <ul class="service-features">
+                        <li>Premium print-ready files</li>
+                        <li>Matching digital versions</li>
+                        <li>Custom typography</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hashtag"></i>
+                    </div>
+                    <h3>Social Media Graphics</h3>
+                    <p>Platform-optimized graphics that boost engagement and followers.</p>
+                    <ul class="service-features">
+                        <li>Facebook/Instagram posts</li>
+                        <li>Story graphics</li>
+                        <li>Profile optimization</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Custom Design Projects</h3>
+                    <p>Unique solutions for your specific visual communication needs.</p>
+                    <ul class="service-features">
+                        <li>Packaging design</li>
+                        <li>Signage & displays</li>
+                        <li>Presentation design</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="service-cta">
+                <p>Don't see exactly what you need? We customize our services for every client.</p>
+                <a href="#contact" class="btn btn-secondary">Discuss Your Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="content-section alt-bg">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why <span>Choose DesignHub</span></h2>
+                <p class="section-subtitle">What sets us apart from other design services</p>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Premium Quality</h3>
+                    <p>We don't deliver templates - every design is custom crafted for your unique needs.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Fast Turnaround</h3>
+                    <p>Need it urgently? We offer expedited services without compromising quality.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3>Affordable Rates</h3>
+                    <p>Professional design doesn't have to break the bank with our competitive pricing.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-undo"></i>
+                    </div>
+                    <h3>Unlimited Revisions</h3>
+                    <p>We work with you until you're 100% satisfied with the final product.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Clear Communication</h3>
+                    <p>Regular updates and responsive communication throughout the process.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-file-download"></i>
+                    </div>
+                    <h3>All File Formats</h3>
+                    <p>Receive your designs in all necessary formats for both print and digital use.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our <span>Portfolio</span></h2>
+                <p class="section-subtitle">See examples of our recent design work</p>
+            </div>
+            
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">All Work</button>
+                <button class="filter-btn" data-filter="logos">Logos</button>
+                <button class="filter-btn" data-filter="posters">Posters</button>
+                <button class="filter-btn" data-filter="print">Print Materials</button>
+                <button class="filter-btn" data-filter="social">Social Media</button>
+            </div>
+            
+            <div class="portfolio-grid">
+                <!-- Portfolio Item 1 -->
+                <div class="portfolio-item" data-category="logos">
+                    <img src="assets/kuccps poster 1.png" alt="Logo Design Example">
+                    <div class="portfolio-overlay">
+                        <h3>A Cyber Poster</h3>
+                        <p>Kuccps Application Poster </p>
+                        <a href="assets/kuccps poster 1.png" data-lightbox="portfolio" data-title="Graphic Design Sample">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-item" data-category="posters">
+                    <img src="assets/Service poster.png" alt="Event Poster Example">
+                    <div class="portfolio-overlay">
+                        <h3>Graphic Design Poster</h3>
+                        <p>Vibrant promotion</p>
+                        <a href="assets/Service poster.png" data-lightbox="portfolio" data-title="Graphic Design Sample">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 3 -->
+                <div class="portfolio-item" data-category="print">
+                    <img src="assets/Valentines poster.png" alt="Business Card Example">
+                    <div class="portfolio-overlay">
+                        <h3>Premium Business Posters</h3>
+                        <p>Elegant stationery design</p>
+                        <a href="assets/Valentines poster.png" data-lightbox="portfolio" data-title="Graphic Design Sample">View Details</a>
+                    </div>
+                </div>
+                
+              
+                
+                <!-- Add more portfolio items as needed -->
+            </div>
+            
+            <div class="portfolio-cta">
+                <p>Want to see more examples of a specific design type?</p>
+                <a href="#contact" class="btn btn-outline">Request More Samples</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Process -->
+    <section id="process" class="content-section alt-bg">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our <span>Design Process</span></h2>
+                <p class="section-subtitle">Simple steps to getting your perfect design</p>
+            </div>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Consultation</h3>
+                        <p>We discuss your needs, preferences, and goals for the project.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Quote & Agreement</h3>
+                        <p>You receive a transparent quote and we agree on project terms.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Concept Development</h3>
+                        <p>We create initial design concepts for your review.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Feedback & Revisions</h3>
+                        <p>You provide feedback and we refine the design.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Final Delivery</h3>
+                        <p>You receive all final files in required formats.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Client <span>Testimonials</span></h2>
+                <p class="section-subtitle">What our clients say about our work</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"The logo DesignHub created perfectly captured our brand identity. We've received countless compliments from customers!"</p>
+                    </div>
+                    <div class="client-info">
+                        <div class="client-avatar">
+                            <img src="https://img.freepik.com/free-vector/bangkok-thailand-may-12-2023-caricature-tiger-woods-smilin_1308-133923.jpg?uid=
+                            R198094632&ga=GA1.1.2023921765.1745929052&semt=ais_hybrid&w=740" alt="Sarah M.">
+                        </div>
+                        <div class="client-details">
+                            <h4>Sarah M.</h4>
+                            <p>Boutique Owner</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Our event posters attracted twice as many attendees as previous years. The designs were vibrant and eye-catching."</p>
+                    </div>
+                    <div class="client-info">
+                        <div class="client-avatar">
+                            <img src="https://img.freepik.com/free-psd/3d-rendering-hair-style-avatar-design_23-2151869121.jpg?uid=R198094632&ga=GA1
+                            .1.2023921765.1745929052&semt=ais_hybrid&w=740" alt="James K.">
+                        </div>
+                        <div class="client-details">
+                            <h4>James K.</h4>
+                            <p>Event Organizer</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"The complete branding package gave our startup a professional image we couldn't have achieved on our own."</p>
+                    </div>
+                    <div class="client-info">
+                        <div class="client-avatar">
+                            <img src="https://img.freepik.com/free-vector/cute-boy-round-background_1308-69222.jpg?uid=R198094632&ga=GA1.1.2
+                            023921765.1745929052&semt=ais_hybrid&w=740" alt="Linda P.">
+                        </div>
+                        <div class="client-details">
+                            <h4>Linda P.</h4>
+                            <p>Tech Entrepreneur</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="content-section">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Let's Create <span>Something Amazing</span></h2>
+                    <p>Ready to elevate your brand with professional design? Get in touch today.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="method-details">
+                                <h3>Call Us</h3>
+                                <a href="tel:+254700800275">+254 700 800 275</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="method-details">
+                                <h3>Email Us</h3>
+                                <a href="mailto:design@meikequickcyber.com">meikequickcyber@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="method-details">
+                                <h3>Visit Us</h3>
+                                <p>DesignHub Studio, Embu Town</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <p>Connect with us:</p>
+                        <a href="https://www.facebook.com/himtechcreations" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/254700800275" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form id="design-inquiry">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder="Phone Number">
+                        </div>
+                        <div class="form-group">
+                            <select id="service" name="service" required>
+                                <option value="">Select a Service</option>
+                                <option value="logo">Logo Design</option>
+                                <option value="poster">Poster Design</option>
+                                <option value="flyer">Flyers & Banners</option>
+                                <option value="branding">Full Branding</option>
+                                <option value="other">Other Design</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Tell us about your project..." rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>DesignHub</h3>
+                    <p>Professional graphic design services helping businesses and individuals in Kenya stand out with exceptional visual communication.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#process">Our Process</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-services">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Logo Design</a></li>
+                        <li><a href="#">Poster Design</a></li>
+                        <li><a href="#">Business Cards</a></li>
+                        <li><a href="#">Social Media Graphics</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Nairobi , Kenya</p>
+                    <p><i class="fas fa-phone-alt"></i> +254 700 800 275</p>
+                    <p><i class="fas fa-envelope"></i> meikequickcyber@gmail.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> DesignHub by Meike Quick Cyber. All Rights Reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#hero" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/254700800275" class="floating-whatsapp-btn" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-whatsapp"></i>
+    <span>Reach Out</span>
+  </a>
+
+  <!-- Floating Back Button -->
+<a href="services.html" class="floating-back-btn" title="Back to Services">
+    <i class="fas fa-arrow-left"></i>
+    <span>Get Back</span>
+  </a>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+    <script src="js/designhub.js"></script>
+</body>
+</html>

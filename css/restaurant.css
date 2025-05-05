@@ -1,0 +1,854 @@
+/* ===== CSS Variables ===== */
+:root {
+    --primary-color: #a85a3a; /* Example earthy/warm restaurant color */
+    --secondary-color: #f4f4f4; /* Light background */
+    --dark-color: #333; /* Dark text/footer */
+    --light-color: #fff; /* White text/background */
+    --gray-color: #777; /* Grey text */
+    --heading-font: 'Playfair Display', serif;
+    --body-font: 'Open Sans', sans-serif;
+    --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+    --container-max-width: 1200px;
+    --section-padding: 5rem 0;
+}
+
+/* ===== Base Styles ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    line-height: 1.6;
+    color: var(--dark-color);
+    background-color: var(--light-color);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--dark-color);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 100%;
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+section {
+    padding: var(--section-padding);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.section-title p {
+    color: var(--gray-color);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--primary-color);
+  margin: 1.5rem auto 0;
+  border-radius: 2px;
+}
+
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-block;
+  font-weight: 600;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  transition: var(--transition);
+  border: 2px solid transparent;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  border-color: var(--primary-color);
+  box-shadow: var(--box-shadow);
+}
+
+.btn-primary:hover {
+  background-color: darken(var(--primary-color), 10%); /* Needs Sass or custom calculation */
+   opacity: 0.9; /* Simple hover effect */
+  transform: translateY(-3px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-outline:hover {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+}
+
+/* ===== Header ===== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white */
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+header.scrolled {
+  background-color: var(--light-color); /* Solid white when scrolled */
+  box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 0;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-family: var(--heading-font);
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.logo span {
+    color: var(--dark-color);
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 2.5rem;
+}
+
+.nav-links a {
+  font-weight: 600;
+  position: relative;
+  padding: 0.5rem 0;
+  color: var(--dark-color);
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary-color);
+  transition: var(--transition);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.mobile-menu-btn {
+  display: none; /* Hidden by default */
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: var(--dark-color);
+  cursor: pointer;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--light-color);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('https://images.unsplash.com/photo-1505275350973-82a623da7574?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+    position: relative; /* Needed for full height background */
+    padding-top: 80px; /* Offset for fixed header */
+}
+
+.hero-content {
+    z-index: 1; /* Ensure content is above the background overlay */
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    color: var(--light-color);
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+}
+
+.hero-btns {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+/* ===== About Section ===== */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.about-image {
+    flex: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+}
+
+.about-image img {
+    transition: var(--transition);
+}
+
+.about-image:hover img {
+    transform: scale(1.05);
+}
+
+.about-content {
+    flex: 1.3; /* Give content slightly more space */
+}
+
+.about-content .section-title h2 {
+     font-size: 2.2rem; /* Adjust size for inside flex container */
+     margin-bottom: 1rem;
+}
+
+.about-content p {
+    margin-bottom: 1.5rem;
+    color: var(--gray-color);
+}
+
+/* Adjust text alignment for the title inside about-content */
+.about-content .section-title {
+    text-align: left;
+    margin-bottom: 2rem; /* Adjust margin */
+}
+/* Hide the ::after element for left-aligned titles if desired */
+.about-content .section-title::after {
+    display: none;
+}
+
+
+/* ===== Menu Section ===== */
+.menu {
+    background-color: var(--secondary-color);
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.menu-item {
+    background: var(--light-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    text-align: center;
+    padding-bottom: 1.5rem;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Crop image to fit */
+    margin-bottom: 1rem;
+}
+
+.menu-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.menu-item p {
+    color: var(--gray-color);
+    font-size: 0.95rem;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+}
+
+.menu-item .price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--dark-color);
+}
+
+
+/* ===== Gallery Section ===== */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 280px; /* Fixed height */
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Optional: Add an overlay on hover */
+/*
+.gallery-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.gallery-item:hover::after {
+    opacity: 1;
+}
+*/
+
+
+/* ===== Testimonials Section ===== */
+.testimonials {
+    background-color: var(--secondary-color);
+}
+
+/* Basic styling for testimonial cards - adjust if using a slider library */
+.testimonial-slider {
+    max-width: 900px;
+    margin: 0 auto;
+    /* If using a slider library, add its specific container classes/styles here */
+}
+
+.testimonial-card {
+    background: var(--light-color);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    /* Add margin if using a slider to space cards */
+    margin: 0 1rem; /* Example margin */
+}
+
+.client-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    object-fit: cover;
+    border: 3px solid var(--primary-color);
+}
+
+.testimonial-card p {
+    font-style: italic;
+    color: var(--gray-color);
+    margin-bottom: 1.5rem;
+}
+
+.client-name {
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    color: var(--dark-color);
+}
+
+.client-title {
+    font-size: 0.9rem;
+    color: var(--gray-color);
+}
+
+/* ===== Reservation Section ===== */
+.reservation-form-container {
+    max-width: 700px;
+    margin: 0 auto;
+    background: var(--light-color);
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+}
+
+.reservation-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.reservation-form label {
+    display: block;
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+.reservation-form input,
+.reservation-form textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: var(--body-font);
+    font-size: 1rem;
+}
+
+.reservation-form input:focus,
+.reservation-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(var(--primary-color-rgb, 168, 90, 58), 0.25); /* Needs JS or calculation for rgba */
+}
+
+.reservation-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.reservation-form button {
+    width: 100%; /* Full width button */
+    padding: 1rem;
+    font-size: 1.1rem;
+}
+
+/* Add a variable for primary color RGB if needed for focus shadow */
+:root {
+    --primary-color: #a85a3a;
+    --primary-color-rgb: 168, 90, 58; /* RGB values for --primary-color */
+    /* ... other variables */
+}
+
+
+/* ===== Contact Section ===== */
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+}
+
+.contact-icon {
+    width: 45px;
+    height: 45px;
+    background: rgba(var(--primary-color-rgb, 168, 90, 58), 0.1); /* Primary color with transparency */
+    color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+.contact-text h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
+}
+
+.contact-text p,
+.contact-text a {
+    color: var(--gray-color);
+    font-size: 1rem;
+}
+
+.contact-map {
+    flex: 1; /* Allow map to take remaining space */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+}
+
+.contact-map iframe {
+    display: block; /* Remove default iframe margin */
+}
+
+
+/* ===== Footer ===== */
+footer {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    padding: 4rem 0 2rem;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.footer-col h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    color: var(--light-color); /* Ensure footer headings are light */
+    position: relative;
+    padding-bottom: 0.75rem;
+}
+
+.footer-col h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: var(--primary-color);
+}
+
+
+.footer-col p {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.social-link {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    color: var(--light-color);
+    font-size: 1.1rem;
+}
+
+.social-link:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-links a,
+.footer-links p { /* Style both links and paragraphs */
+    color: rgba(255, 255, 255, 0.7);
+    transition: var(--transition);
+    display: flex; /* Use flex to align icon and text */
+    align-items: center;
+    gap: 0.5rem; /* Space between icon and text */
+    font-size: 0.95rem;
+}
+
+.footer-links a:hover {
+    color: var(--light-color);
+    transform: translateX(5px);
+}
+.footer-links p i { /* Style icon in p tag */
+    font-size: 1.1rem; /* Slightly larger icon */
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 2rem; /* Add space above border */
+}
+
+.footer-bottom p {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.85rem;
+}
+
+/* Utility classes (from previous example, adjust if needed) */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.mt-4 { margin-top: 2rem; } /* Example margin top */
+.me-2 { margin-right: 0.5rem; } /* Example margin right for icons */
+
+
+/* ===== Responsive Styles ===== */
+@media (max-width: 992px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .about-container {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .about-content .section-title {
+         text-align: center; /* Center title on smaller screens */
+         margin-bottom: 1.5rem;
+     }
+      .about-content .section-title::after {
+          display: block; /* Show the ::after element again */
+          margin: 1.5rem auto 0;
+     }
+
+
+    .about-image {
+        max-width: 500px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr; /* Stack contact info and map */
+    }
+
+     .contact-map iframe {
+         height: 300px; /* Adjust map height */
+     }
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block; /* Show mobile button */
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 80px; /* Adjust based on header height */
+        left: 0;
+        width: 100%;
+        background: var(--light-color); /* White background for menu */
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+        box-shadow: var(--box-shadow);
+        transform: translateY(-150%); /* Hide menu off-screen */
+        transition: var(--transition);
+        z-index: 999; /* Below the header */
+    }
+
+    .nav-links.active {
+        transform: translateY(0); /* Show menu when active */
+    }
+
+    .nav-links li {
+        margin: 0 0 1.5rem 0; /* Stack links vertically */
+    }
+
+    .nav-links li:last-child {
+        margin-bottom: 0;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+    }
+
+    .hero {
+         padding-top: 100px; /* More space for header + potentially taller content */
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    section {
+        padding: 3rem 0; /* Reduced section padding */
+    }
+
+    .section-title h2 {
+        font-size: 2rem;
+    }
+
+    .menu-item img {
+         height: 180px; /* Smaller image height */
+    }
+
+    .testimonial-card {
+         margin: 0 0.5rem; /* Reduce margin for slider on small screens */
+         padding: 1.5rem;
+     }
+
+     .footer-container {
+         grid-template-columns: 1fr; /* Stack footer columns */
+         text-align: center;
+     }
+      .footer-col h3::after {
+          left: 50%; /* Center the underline */
+          transform: translateX(-50%);
+      }
+      .social-links {
+          justify-content: center; /* Center social links */
+      }
+       .footer-links a, .footer-links p {
+           justify-content: center; /* Center links/paragraphs in stacked footer */
+       }
+}
+
+@media (max-width: 576px) {
+     .hero h1 {
+         font-size: 2.2rem;
+     }
+      .hero-btns {
+          flex-direction: column;
+          gap: 1rem;
+      }
+      .btn {
+          padding: 0.7rem 1.5rem;
+          font-size: 0.95rem;
+      }
+
+     .section-title h2 {
+         font-size: 1.8rem;
+     }
+
+     .gallery-grid {
+         grid-template-columns: 1fr; /* Stack gallery items */
+     }
+
+      .testimonial-card {
+          margin: 0; /* No margin for single item slider view */
+      }
+
+      .reservation-form-container {
+          padding: 1.5rem; /* Reduced form padding */
+      }
+}
+
+/* Add this section to your CSS file (style.css) */
+
+/* ===== Floating Button ===== */
+.floating-back-btn {
+    position: fixed;
+    bottom: 2rem; /* Distance from bottom */
+    right: 2rem; /* Distance from right */
+    z-index: 1100; /* Ensure it's above everything */
+    display: inline-block;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    background-color: var(--primary-color); /* Use your restaurant's primary color */
+    color: var(--light-color); /* Use your restaurant's light color */
+    text-decoration: none;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    animation: pulse 2s infinite; /* Apply the pulse animation */
+    text-align: center;
+    border: none; /* Remove default button border */
+  }
+  
+  .floating-back-btn:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Slightly stronger shadow on hover */
+    animation: none; /* Stop animation on hover for clearer interaction */
+  }
+  
+  /* Define the pulse animation */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: var(--box-shadow);
+    }
+    50% {
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Use hover shadow for animation */
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: var(--box-shadow);
+    }
+  }
+  
+  /* Optional: Adjust position and size for smaller screens */
+  @media (max-width: 768px) {
+    .floating-back-btn {
+      bottom: 1rem;
+      right: 1rem;
+      padding: 0.6rem 1.2rem;
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* ... rest of your style.css code ... */

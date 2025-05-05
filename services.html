@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Services - Meike Quick Cyber</title>
+      <style>
+        /* Add this CSS within your <style> tags or in a separate CSS file */
+        .our-services {
+            text-align: center; /* Centers the text horizontally */
+            font-family: 'Arial', sans-serif; /* Example modern font */
+            font-size: 2.5em; /* Larger, more prominent size */
+            color: #333; /* Dark grey for good visibility and modern feel */
+            margin-top: 40px; /* Add some space above the heading */
+            margin-bottom: 20px; /* Add some space below the heading */
+            text-transform: uppercase; /* Optional: make text uppercase for emphasis */
+            letter-spacing: 2px; /* Optional: space out letters slightly */
+            padding-top: 5%;
+        }
+
+        /* Optional: Add a subtle underline or border for extra style */
+        .our-services::after {
+            content: '';
+            display: block;
+            width: 80px; /* Width of the line */
+            height: 4px; /* Thickness of the line */
+            background: #007BFF; /* Color of the line (example blue) */
+            margin: 10px auto 0; /* Center the line below the text */
+            border-radius: 2px; /* Slightly rounded corners for the line */
+        }
+
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            min-height: 150vh; /* Added for scrolling demonstration */
+        }
+
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366; /* WhatsApp green */
+            color: white;
+            border-radius: 50px;
+            padding: 12px 20px;
+            text-align: center;
+            font-size: 18px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            transition: transform 0.3s ease-in-out; /* Animation */
+        }
+
+        .whatsapp-button:hover {
+            transform: scale(1.1); /* Scale animation on hover */
+        }
+
+        .whatsapp-button i {
+            margin-right: 10px;
+            font-size: 24px;
+        }
+
+    </style>
+  <!-- Bootstrap CSS -->
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <!-- AOS CSS -->
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    rel="stylesheet"
+  />
+  <!-- Custom CSS -->
+
+  <link href="css/services.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="assets/logo.png" alt="Meike Quick Cyber Logo" height="50" class="img-fluid" />
+    </a>
+    <button
+      class="navbar-toggler border-0"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="services.html">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+      <div class="ms-lg-3 mt-3 mt-lg-0">
+        <a href="https://wa.me/254700800275" class="btn btn-success">
+          <i class="fab fa-whatsapp me-2"></i> Get Help
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Custom CSS -->
+<style>
+  /* Navbar styling */
+  .navbar {
+    padding: 0.75rem 1rem;
+  }
+  
+  /* Visible toggle button */
+  .navbar-toggler {
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.25);
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    width: 1.25em;
+    height: 1.25em;
+  }
+  
+  /* Mobile menu styling */
+  @media (max-width: 991.98px) {
+    .navbar-collapse {
+      background-color: white;
+      padding: 1rem;
+      margin-top: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    .nav-item {
+      margin-bottom: 0.5rem;
+    }
+    
+    .nav-link {
+      padding: 0.5rem 1rem !important;
+      border-radius: 4px;
+    }
+    
+    .nav-link:hover,
+    .nav-link.active {
+      background-color: rgba(0,0,0,0.05);
+    }
+  }
+  
+  /* Logo sizing */
+  .navbar-brand img {
+    height: 50px;
+    width: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .navbar-brand:hover img {
+    transform: scale(1.05);
+  }
+  
+  @media (min-width: 992px) {
+    .navbar-brand img {
+      height: 70px;
+    }
+  }
+</style>
+  <!-- Services List -->
+  <section class="services-list py-5" style="padding-top:120px;">
+    <h1 class="our-services">OUR SERVICES</h1>
+    <div class="container">
+      <div class="row g-4">
+        <!-- 1. WebLaunch -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card service-card h-100">
+            <img
+              src="assets/weblaunch.jpg"
+              class="card-img-top"
+              alt="WebLaunch"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">WebLaunch</h5>
+              <p class="card-text">Frontend Development & Modern Fast Websites</p>
+              <a href="weblaunch.html" class="btn btn-primary"
+                >Explore WebLaunch</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. DesignHub -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="card service-card h-100">
+            <img
+              src="assets/designhub.jpg"
+              class="card-img-top"
+              alt="DesignHub"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">DesignHub</h5>
+              <p class="card-text">Graphic Design & Visuals for Brands</p>
+              <a href="designhub.html" class="btn btn-success"
+                >Explore DesignHub</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. DataWiz -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="card service-card h-100">
+            <img
+              src="assets/datawiz.jpg"
+              class="card-img-top"
+              alt="DataWiz"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">DataWiz</h5>
+              <p class="card-text">Excel & Data Visualization Solutions</p>
+              <a href="datawiz.html" class="btn btn-info"
+                >Explore DataWiz</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. QuickGov Services -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="card service-card h-100">
+            <img
+              src="assets/quickgov.jpg"
+              class="card-img-top"
+              alt="QuickGov Services"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">QuickGov Services</h5>
+              <p class="card-text">Government Application Support</p>
+              <a href="quickgov.html" class="btn btn-warning"
+                >Explore QuickGov</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. EduSupport -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+          <div class="card service-card h-100">
+            <img
+              src="assets/edusupport.jpg"
+              class="card-img-top"
+              alt="EduSupport"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">EduSupport</h5>
+              <p class="card-text">Student & Career Guidance</p>
+              <a href="quickgov.html#services" class="btn btn-secondary"
+                >Explore EduSupport</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. FormXpress -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+          <div class="card service-card h-100">
+            <img
+              src="assets/formxpress.jpg"
+              class="card-img-top"
+              alt="FormXpress"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">FormXpress</h5>
+              <p class="card-text">Online Form Filling Services</p>
+              <a href="formxpress.html" class="btn btn-dark"
+                >Explore FormXpress</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. WriteSmart -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="700">
+          <div class="card service-card h-100">
+            <img
+              src="assets/writesmart.jpg"
+              class="card-img-top"
+              alt="WriteSmart"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">WriteSmart</h5>
+              <p class="card-text">Academic Writing & Editing Services</p>
+              <a href="#" class="btn btn-light"
+                >Explore WriteSmart</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. TypeItRight -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="800">
+          <div class="card service-card h-100">
+            <img
+              src="assets/typeitright.jpg"
+              class="card-img-top"
+              alt="TypeItRight"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">TypeItRight</h5>
+              <p class="card-text">Typing & Document Formatting</p>
+              <a href="#" class="btn btn-primary"
+                >Explore TypeItRight</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- 9. Social Boost -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="900">
+          <div class="card service-card h-100">
+            <img
+              src="assets/socialboost.jpg"
+              class="card-img-top"
+              alt="Social Boost"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">SEO Services</h5>
+              <p class="card-text">Boost Online Presence</p>
+              <a href="seo.html" class="btn btn-success"
+                >Explore SEO</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <a href="https://wa.me/254700800275" class="whatsapp-button" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+    Get Help
+</a>
+
+
+   <!-- Footer -->
+   <footer class="footer py-4 bg-dark text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 mb-4 mb-lg-0" data-aos="fade-up">
+             
+                <p>Your reliable partner for creative web design, impactful graphic design, and smart SEO solutions in Kenya.</p>
+                <div class="social-icons">
+                    <a href="#" class="text-white me-3 hover-grow"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-3 hover-grow"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white me-3 hover-grow"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@himtechcreations" target="_blank" class="text-white hover-grow"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 mb-4 mb-md-0" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="h5 mb-3">Services</h3>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="quickgov.html#services" class="text-white-50 hover-underline">HELB</a></li>
+                    <li class="mb-2"><a href="quickgov.html#services" class="text-white-50 hover-underline">KUCCPS</a></li>
+                    <li class="mb-2"><a href="quickgov.html#services" class="text-white-50 hover-underline">KRA PIN</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-6 mb-4 mb-md-0" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="h5 mb-3">Company</h3>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="index.html" class="text-white-50 hover-underline">About Us</a></li>
+                    <li class="mb-2"><a href="contact.html" class="text-white-50 hover-underline">Contact</a></li>
+                    <li class="mb-2"><a href="#" class="text-white-50 hover-underline">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                <h3 class="h5 mb-3">Contact Info</h3>
+                <ul class="list-unstyled text-white-50">
+                    <li class="mb-2"><i class="fas fa-phone me-2"></i> +254 700 800 275</li>
+                    <li class="mb-2"><i class="fas fa-envelope me-2"></i> meikequickcyber@gmail.com</li>
+                    <li><i class="fas fa-map-marker-alt me-2"></i> Nairobi, Kenya</li>
+                </ul>
+            </div>
+        </div>
+        <hr class="my-4 bg-secondary">
+        <div class="text-center">
+            <p class="mb-0">&copy; 2025 Meike Quick Cyber. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+
+  <!-- Scripts -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+  ></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const cards = document.querySelectorAll(".service-card");
+      cards.forEach((card, i) => {
+        card.style.opacity = 0;
+        card.style.transform = "translateY(20px)";
+        setTimeout(() => {
+          card.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+          card.style.opacity = 1;
+          card.style.transform = "translateY(0)";
+        }, 150 * i);
+      });
+    });
+  </script>
+</body>
+</html>

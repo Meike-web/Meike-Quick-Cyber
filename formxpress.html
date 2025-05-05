@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FormXpress - Online Form Filling | Meike Quick Cyber</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <style>
+    :root {
+      --primary: #4361ee;
+      --primary-dark: #3a0ca3;
+      --accent: #4cc9f0;
+      --light: #f8f9fa;
+      --dark: #212529;
+      --success: #38b000;
+      --gradient: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.12);
+      --shadow-lg: 0 8px 24px rgba(0,0,0,0.16);
+      --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #f8fafc;
+    }
+
+    /* Header */
+    .formxpress-header {
+      background: var(--gradient);
+      color: white;
+      padding: 6rem 0 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .formxpress-header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') center/cover;
+      opacity: 0.1;
+    }
+
+    .header-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Service Cards */
+    .service-card {
+      border: none;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      background: white;
+      height: 100%;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .service-icon {
+      width: 80px;
+      height: 80px;
+      background: rgba(67, 97, 238, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      font-size: 2rem;
+      color: var(--primary);
+      transition: var(--transition);
+    }
+
+    .service-card:hover .service-icon {
+      background: var(--gradient);
+      color: white;
+      transform: rotateY(180deg);
+    }
+
+    .badge-pill {
+      background: var(--success);
+      color: white;
+      padding: 0.25rem 0.75rem;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    /* Process Section */
+    .process-step {
+      position: relative;
+      padding-left: 80px;
+      margin-bottom: 2rem;
+    }
+
+    .step-number {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 60px;
+      height: 60px;
+      background: var(--gradient);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    /* Features */
+    .feature-box {
+      background: white;
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: var(--shadow-sm);
+      height: 100%;
+      border-left: 4px solid var(--primary);
+    }
+
+    /* CTA Section */
+    .formxpress-cta {
+      background: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') center/cover;
+      position: relative;
+      color: white;
+    }
+
+    .formxpress-cta::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.7);
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .formxpress-header {
+        padding: 4rem 0;
+        text-align: center;
+      }
+      
+      .process-step {
+        padding-left: 60px;
+      }
+      
+      .step-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">
+        <img src="../assets/logo.png" alt="Meike Quick Cyber Logo" height="50">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="../services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#">FormXpress</a></li>
+          <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+        </ul>
+        <div class="ms-lg-3 mt-3 mt-lg-0">
+          <a href="https://wa.me/254700800275" class="btn btn-primary">
+            <i class="fab fa-whatsapp me-2"></i> Get Help
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="formxpress-header">
+    <div class="container header-content">
+      <div class="row align-items-center">
+        <div class="col-lg-6" data-aos="fade-right">
+          <h1 class="display-4 fw-bold mb-4">FormXpress</h1>
+          <p class="lead mb-4">Fast, accurate online form filling and document support without the hassle.</p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="#services" class="btn btn-light btn-lg px-4">
+              <i class="fas fa-list-check me-2"></i> Our Services
+            </a>
+            <a href="https://wa.me/254700800275" class="btn btn-outline-light btn-lg px-4">
+              <i class="fab fa-whatsapp me-2"></i> Start Now
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-left">
+          <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+               alt="Form Filling" class="img-fluid rounded-3 shadow">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Services Section -->
+  <section id="services" class="py-5">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <h2 class="display-5 fw-bold mb-3">FormXpress Services</h2>
+        <p class="lead">We handle all types of forms and applications with precision and speed</p>
+      </div>
+      
+      <div class="row g-4">
+        <!-- Government Forms -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-card p-4">
+            <div class="service-icon mb-4">
+              <i class="fas fa-landmark"></i>
+            </div>
+            <h3 class="text-center mb-3">Government Forms</h3>
+            <ul class="list-unstyled">
+              <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> NHIF & NSSF registrations</li>
+              <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> KRA PIN applications</li>
+              <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Good Conduct applications</li>
+              <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Passport applications</li>
+              <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Huduma account setups</li>
+              <li><i class="fas fa-check-circle text-success me-2"></i> Password recoveries</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Education Forms -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-card p-4">
+            <div class="service-icon mb-4">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h3 class="text-center mb-3">Education Forms</h3>
+            <ul class="list-unstyled">
+              <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> HELB loan applications</li>
+              <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> KUCCPS applications</li>
+              <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Inter-university transfers</li>
+              <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Bursary applications</li>
+              <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> School registration</li>
+              <li><i class="fas fa-check-circle text-success me-2"></i> Scholarship forms</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Business Forms -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-card p-4">
+            <div class="service-icon mb-4">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <h3 class="text-center mb-3">Business Forms</h3>
+            <ul class="list-unstyled">
+              <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Business name registration</li>
+              <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Online invoicing</li>
+              <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Certificate downloads</li>
+              <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Tax-related forms</li>
+              <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> License applications</li>
+              <li><i class="fas fa-check-circle text-success me-2"></i> Compliance documents</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Custom & PDF Forms -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-card p-4">
+            <div class="service-icon mb-4">
+              <i class="fas fa-file-pdf"></i>
+            </div>
+            <h3 class="text-center mb-3">Custom & PDF Forms</h3>
+            <ul class="list-unstyled">
+              <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Handwritten form digitization</li>
+              <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Editable PDF completion</li>
+              <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Job application forms</li>
+              <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> School/NGO forms</li>
+              <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Printing & signing</li>
+              <li><i class="fas fa-check-circle text-success me-2"></i> Document uploads</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- ID & Document Support -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-card p-4">
+            <div class="service-icon mb-4">
+              <i class="fas fa-id-card"></i>
+            </div>
+            <h3 class="text-center mb-3">ID & Document Support</h3>
+            <ul class="list-unstyled">
+              <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Document collection</li>
+              <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> ID/passport photo uploads</li>
+              <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> File scanning</li>
+              <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Biometric appointments</li>
+              <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Application tracking</li>
+              <li><i class="fas fa-check-circle text-success me-2"></i> Follow-ups</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <h2 class="display-5 fw-bold mb-3">How FormXpress Works</h2>
+        <p class="lead">Simple steps to get your forms completed quickly and correctly</p>
+      </div>
+      
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="process-step">
+            <div class="step-number">1</div>
+            <div>
+              <h4>Send Your Requirements</h4>
+              <p>WhatsApp us the form you need help with and any instructions or documents required.</p>
+            </div>
+          </div>
+          
+          <div class="process-step">
+            <div class="step-number">2</div>
+            <div>
+              <h4>Document Submission</h4>
+              <p>Upload clear photos or scans of your documents (ID, certificates, etc.) through WhatsApp.</p>
+            </div>
+          </div>
+          
+          <div class="process-step">
+            <div class="step-number">3</div>
+            <div>
+              <h4>Secure Payment</h4>
+              <p>Make payment via M-Pesa (instant confirmation) for the service fee.</p>
+            </div>
+          </div>
+          
+          <div class="process-step">
+            <div class="step-number">4</div>
+            <div>
+              <h4>Form Processing</h4>
+              <p>We complete your form accurately and upload/submit as required.</p>
+            </div>
+          </div>
+          
+          <div class="process-step">
+            <div class="step-number">5</div>
+            <div>
+              <h4>Delivery & Confirmation</h4>
+              <p>Receive your completed form via email/WhatsApp with submission proof.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <h2 class="display-5 fw-bold mb-3">Why Choose FormXpress?</h2>
+        <p class="lead">The fastest, most reliable form filling service in Kenya</p>
+      </div>
+      
+      <div class="row g-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-box">
+            <h3><i class="fas fa-bolt text-primary me-2"></i> Lightning Fast</h3>
+            <p>Same-day service for most forms. No waiting in queues or struggling with websites.</p>
+          </div>
+        </div>
+        
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-box">
+            <h3><i class="fas fa-check-circle text-primary me-2"></i> Error-Free</h3>
+            <p>Our experts ensure every field is completed correctly to prevent rejections.</p>
+          </div>
+        </div>
+        
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="feature-box">
+            <h3><i class="fas fa-headset text-primary me-2"></i> Full Support</h3>
+            <p>We follow up on applications and provide updates until completion.</p>
+          </div>
+        </div>
+        
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-box">
+            <h3><i class="fas fa-lock text-primary me-2"></i> Secure</h3>
+            <p>Your documents and information are handled with complete confidentiality.</p>
+          </div>
+        </div>
+        
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-box">
+            <h3><i class="fas fa-mobile-alt text-primary me-2"></i> Remote Service</h3>
+            <p>Everything done via WhatsApp/email - no need to visit any office.</p>
+          </div>
+        </div>
+        
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="feature-box">
+            <h3><i class="fas fa-shield-alt text-primary me-2"></i> Guaranteed</h3>
+            <p>We correct any issues at no extra cost if there are submission problems.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="formxpress-cta py-5">
+    <div class="container text-center position-relative" style="z-index: 2;">
+      <div class="row justify-content-center">
+        <div class="col-lg-8" data-aos="fade-up">
+          <h2 class="display-5 fw-bold mb-4">Need Forms Completed Today?</h2>
+          <p class="lead mb-4">Let us handle the paperwork while you focus on what matters.</p>
+          <div class="d-flex justify-content-center gap-3">
+            <a href="https://wa.me/254700800275" class="btn btn-light btn-lg px-4">
+              <i class="fab fa-whatsapp me-2"></i> WhatsApp Now
+            </a>
+            <a href="#" class="btn btn-outline-light btn-lg px-4">
+              <i class="fas fa-envelope me-2"></i> Email Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-4 bg-dark text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <img src="../assets/logo.png" alt="Meike Quick Cyber Logo" height="50" class="mb-3">
+          <p>Your trusted partner for form filling services in Kenya.</p>
+        </div>
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <h3 class="h5 mb-3">Quick Links</h3>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="../index.html" class="text-white-50">Home</a></li>
+            <li class="mb-2"><a href="../services.html" class="text-white-50">Services</a></li>
+            <li><a href="../contact.html" class="text-white-50">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h3 class="h5 mb-3">Contact</h3>
+          <ul class="list-unstyled">
+            <li class="mb-2"><i class="fas fa-phone me-2"></i> +254 700 800 275</li>
+            <li class="mb-2"><i class="fas fa-envelope me-2"></i> meikequickcyber@gmail.com</li>
+            <li><i class="fas fa-map-marker-alt me-2"></i> Nairobi, Kenya</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="my-4 bg-secondary">
+      <div class="text-center">
+        <p class="mb-0 small">&copy; 2025 Meike Quick Cyber. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Initialize AOS animation
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true
+    });
+  </script>
+</body>
+</html>
