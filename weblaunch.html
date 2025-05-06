@@ -119,6 +119,37 @@
       height: 70px;
     }
   }
+
+  /* Responsive button sizing */
+  .cta-section .btn {
+    font-size: 1rem; /* Base font size */
+  }
+  
+  @media (min-width: 576px) {
+    .cta-section .btn {
+      font-size: 1.25rem; /* Larger on tablets/desktop */
+    }
+  }
+
+  /* Stack vertically on mobile, row on larger screens */
+  .cta-section .d-flex {
+    flex-direction: column;
+  }
+  
+  @media (min-width: 576px) {
+    .cta-section .d-flex {
+      flex-direction: row;
+    }
+  }
+
+  /* Hover effect */
+  .hover-grow {
+    transition: transform 0.2s ease;
+  }
+  .hover-grow:hover {
+    transform: scale(1.03);
+  }
+  
 </style>
   <!-- Hero Section -->
   <section class="weblaunch-hero">
@@ -283,24 +314,24 @@
 
 
     
-        <section class="cta-section py-5 bg-primary text-white">
-        <div class="container text-center">
-          <div class="row justify-content-center">
-            <div class="col-lg-8" data-aos="fade-up">
-              <h2 class="display-5 fw-bold mb-4">Ready to Launch Your Website?</h2>
-              <p class="lead mb-4">Let's create a frontend that wows your visitors and grows your business</p>
-              <div class="d-flex justify-content-center gap-3">
-                <a href="https://wa.me/254700800275" class="btn btn-light btn-lg px-4 hover-grow">
-                  <i class="fab fa-whatsapp me-2"></i> Chat Now
-                </a>
-                <a href="../contact.html" class="btn btn-outline-light btn-lg px-4 hover-grow">
-                  <i class="fas fa-envelope me-2"></i> Email Us
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+  <section class="cta-section py-5 bg-primary text-white">
+    <div class="container text-center">
+      <div class="row justify-content-center">
+        <div class="col-lg-8" data-aos="fade-up">
+          <h2 class="display-5 fw-bold mb-4">Ready to Launch Your Website?</h2>
+          <p class="lead mb-4">Let's create a frontend that wows your visitors and grows your business</p>
+          <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+            <a href="https://wa.me/254700800275" class="btn btn-light btn-lg px-sm-4 px-3 py-2 hover-grow">
+              <i class="fab fa-whatsapp me-2"></i> Chat Now
+            </a>
+            <a href="contact.html" class="btn btn-outline-light btn-lg px-sm-4 px-3 py-2 hover-grow">
+              <i class="fas fa-envelope me-2"></i> Email Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer class="footer py-4 bg-dark text-white">
